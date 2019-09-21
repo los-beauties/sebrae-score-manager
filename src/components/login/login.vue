@@ -17,8 +17,8 @@ import {
 } from 'vuex'
 export default {
   data: () => ({
-    email: "",
-    password: ""
+    email: '',
+    password: ''
   }),
   methods: {
     ...mapMutations('app', ['setLogin']),

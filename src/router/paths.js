@@ -18,5 +18,10 @@ export default [
     path: '/products',
     // Relative to /src/views
     view: 'Products'
+  },
+  {
+    path: '/perfil',
+    // Relative to /src/views
+    view: 'Perfil'
   }
 ]

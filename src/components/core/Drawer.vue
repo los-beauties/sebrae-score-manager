@@ -61,7 +61,7 @@ export default {
       {
         to: '/dashboard',
         icon: 'mdi-view-dashboard',
-        text: 'Meu Sebrae Score '
+        text: 'Feed'
       },
       {
         to: '/catalog',
@@ -72,6 +72,11 @@ export default {
         to: '/products',
         icon: 'mdi-view-dashboard',
         text: 'Meus Produtos'
+      },
+      {
+        to: '/perfil',
+        icon: 'mdi-view-dashboard',
+        text: 'Meu perfil'
       }
     ],
     responsive: false
