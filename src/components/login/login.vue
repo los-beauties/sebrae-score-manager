@@ -8,7 +8,7 @@ v-card.elevation-12
   v-card-actions
     v-spacer
     v-btn(color='#2196f3' style="color: white !important" @click="clicked") Criar conta
-    v-btn(color='#2196f3' style="color: white !important" @click="login") Login
+    v-btn(color='#2196f3' style="color: white !important" @click="auth") Login
 </template>
 
 <script>
@@ -22,9 +22,6 @@ export default {
   }),
   methods: {
     ...mapMutations('app', ['setLogin']),
-    login () {
-      this.setLogin(true)
-    },
     auth () {
       const data = {
         email: this.email,
