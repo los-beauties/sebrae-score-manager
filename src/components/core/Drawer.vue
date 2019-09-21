@@ -67,6 +67,11 @@ export default {
         to: '/catalog',
         icon: 'mdi-view-dashboard',
         text: 'Shop'
+      },
+      {
+        to: '/products',
+        icon: 'mdi-view-dashboard',
+        text: 'Meus Produtos'
       }
     ],
     responsive: false
