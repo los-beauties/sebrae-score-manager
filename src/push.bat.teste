@@ -1,6 +1,0 @@
-CALL az login
-CALL az acr login --name repositorio
-
-CALL docker build --rm --no-cache -f "dockerfile" -q -t repositorio.azurecr.io/central-az ./
-CALL docker push repositorio.azurecr.io/central-az
-CALL az container create --resource-group az4 --name central-az --image repositorio.azurecr.io/central-az --cpu 1 --memory 1 --registry-login-server repositorio.azurecr.io --registry-username repositorio --registry-password 8B7yT24QV7Njpyn8OuwLGZI/GfeWNA7n --dns-name-label central-az --ports 80
