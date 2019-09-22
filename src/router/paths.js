@@ -23,5 +23,10 @@ export default [
     path: '/perfil',
     // Relative to /src/views
     view: 'Perfil'
+  },
+  {
+    path: '/landing',
+    // Relative to /src/views
+    view: 'LandingPage'
   }
 ]

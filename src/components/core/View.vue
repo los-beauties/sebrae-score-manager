@@ -9,7 +9,7 @@
 export default {
   metaInfo () {
     return {
-      title: 'Los Beauties'
+      title: 'Sebrae Score'
     }
   }
 }

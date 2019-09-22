@@ -19,7 +19,7 @@
       >
         <v-list-tile avatar>
           <v-list-tile-title class="title pl-5">
-            Los Beauties
+            Sebrae Score
           </v-list-tile-title>
         </v-list-tile>
         <v-divider/>

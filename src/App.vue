@@ -1,10 +1,11 @@
 <template lang="pug">
   v-app
-    login(v-if="!login")
-    core-filter(v-if="login")
-    core-toolbar(v-if="login")
-    core-drawer(v-if="login")
-    core-view(v-if="login")
+    router-view(v-if="landing")
+    login(v-if="!login && !landing")
+    core-filter(v-if="login && !landing")
+    core-toolbar(v-if="login && !landing")
+    core-drawer(v-if="login && !landing")
+    core-view(v-if="login && !landing")
 </template>
 <script>
 import {
@@ -13,8 +14,20 @@ import {
 const login = () => import('@/views/Login')
 export default {
   components: { login },
+  data: () => ({
+    landing: false
+  }),
   computed: {
     ...mapState('app', ['login'])
+  },
+  watch: {
+    '$route' (to, from) {
+      if (to.name === 'LandingPage') {
+        this.landing = true
+      } else {
+        this.landing = false
+      }
+    }
   }
 }
 </script>
