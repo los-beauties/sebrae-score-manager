@@ -61,7 +61,7 @@ export default {
       {
         to: '/dashboard',
         icon: 'mdi-view-dashboard',
-        text: 'Feed'
+        text: 'Perguntas'
       },
       {
         to: '/catalog',
@@ -76,14 +76,13 @@ export default {
       {
         to: '/perfil',
         icon: 'mdi-view-dashboard',
-        text: 'Meu perfil'
+        text: 'Minha empresa'
       }
     ],
     responsive: false
   }),
   computed: {
     ...mapState('app', ['image', 'color']),
-    ...mapState('central', ['dataApi']),
     inputValue: {
       get () {
         return this.$store.state.app.drawer

@@ -1,25 +1,36 @@
 <template lang="pug">
 v-card.mx-auto()
-  v-img(src='https://cdn.vuetifyjs.com/images/cards/sunshine.jpg' height='200px')
+  v-img(src='https://m.sebrae.com.br/Sebrae/Portal%20Sebrae/EAD2/Thumb%20EAD2/Como%20criar%20um%20modelo%20de%20neg%C3%B3cio%20de%20impacto%20socioambiental.png' height='300px')
   v-card-title
-    div Top western road trips
-    span.grey--text.subtitle-1 1,000 miles of wonder
+    .title Como criar um modelo de negócio de impacto socioambiental
+    .subheading(style="color: green") R$ 30,00
   v-card-actions
     v-layout(row wrap).pb-3
-      v-btn(text='') Comprar
+      v-btn(color="blue" @click="comprar" style="color: white !important" v-if="pay") Comprar
       v-btn(@click='show = !show')
         | Detalhes
   v-expand-transition
     div(v-show='show')
       v-card-text
-        | I&apos;m a thing. But, like most politicians, he promised more than he could deliver. You won&apos;t have time for sleeping, soldier, not with all the bed making you&apos;ll be doing. Then we&apos;ll go with that data file! Hey, you add a one and two zeros to that or we walk! You&apos;re going to do his laundry? I&apos;ve got to find a way to escape.
+        | Conheça modelos de negócios de impacto socioambiental e aprenda como transformar realidades por meio do empreendedorismo com propósito.
 </template>
 
 <script>
 export default {
+  props: {
+    pay: {
+      type: Boolean,
+      default: true
+    }
+  },
   data: () => ({
     show: false
-  })
+  }),
+  methods: {
+    comprar () {
+      this.$emit('buy')
+    }
+  }
 }
 </script>
 <style lang="scss">

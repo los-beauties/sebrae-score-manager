@@ -14,7 +14,7 @@
     #imagem1
       h1 Vamos começar seu cadastro?
       .card
-        h2 Qual seu nome?
+        h2 Qual é o seu nome?
         v-text-field(solo='' height="80" v-on:keyup.enter='$vuetify.goTo("#imagem2", options)')
     #imagem2
       .card

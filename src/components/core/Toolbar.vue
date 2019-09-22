@@ -9,13 +9,13 @@
       v-spacer
         v-toolbar-items()
           v-flex(align-center="" layout="" py-2="")
-            .money R$ 0,00
+            .money R$ {{money}}
 </template>
 
 <script>
 
 import {
-  mapMutations
+  mapMutations, mapState
 } from 'vuex'
 export default {
   data: () => ({
@@ -24,6 +24,9 @@ export default {
     responsiveInput: false,
     hasBackupStandard: false
   }),
+  computed: {
+    ...mapState('app', ['money'])
+  },
   watch: {
     '$route' (val) {
       this.title = val.name
@@ -36,7 +39,6 @@ export default {
   beforeDestroy () {
     window.removeEventListener('resize', this.onResponsiveInverted)
   },
-
   methods: {
     ...mapMutations('app', ['setDrawer', 'toggleDrawer']),
     onClickBtn () {

@@ -12,8 +12,14 @@ export default [
   },
   {
     path: '/catalog',
+    name: 'Marketplace',
     // Relative to /src/views
     view: 'Catalog'
+  },
+  {
+    path: '/achievements',
+    // Relative to /src/views
+    view: 'MinhasConquistas'
   },
   {
     path: '/products',
@@ -22,6 +28,7 @@ export default [
   },
   {
     path: '/perfil',
+    name: 'Company',
     // Relative to /src/views
     view: 'Perfil'
   },

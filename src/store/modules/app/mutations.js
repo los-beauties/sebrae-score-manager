@@ -5,5 +5,7 @@ export default {
   setImage: set('image'),
   setColor: set('color'),
   setLogin: set('login'),
+  setMoney: set('money'),
+  setProduct: set('products'),
   toggleDrawer: toggle('drawer')
 }

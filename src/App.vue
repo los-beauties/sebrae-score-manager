@@ -1,5 +1,22 @@
 <template lang="pug">
   v-app
+    v-dialog(v-model='dialog')
+      v-card
+        v-card-title.headline(v-if="!sim") Você conhece a empresa Beauty Date?
+        v-card-title.headline(v-else) Essa empresa está no Endereço Av. Sete de Setembro, 4751 - 4 - Água Verde, Curitiba - PR, 80250-205?
+        v-card-text
+        v-card-actions
+          .flex-grow-1
+          v-btn(color='blue' text='' @click='dialog = false' style="color: white !important")
+            | Não sei
+          v-btn(color='red' text='' @click='dialog = false' style="color: white !important" v-if="!sim")
+            | Não
+          v-btn(color='red' text='' @click='dialog = false' style="color: white !important" v-else)
+            | Endereço incorreto
+          v-btn(color='green darken-1' text='' @click='sim = true' style="color: white !important" v-if="!sim")
+            | Sim
+          v-btn(color='green darken-1' text='' @click='closeDialog' style="color: white !important" v-else)
+            | Esse é o endereço correto
     router-view(v-if="landing")
     login(v-if="!login && !landing")
     core-filter(v-if="login && !landing")
@@ -9,16 +26,19 @@
 </template>
 <script>
 import {
-  mapState
+  mapState,
+  mapMutations
 } from 'vuex'
 const login = () => import('@/views/Login')
 export default {
   components: { login },
   data: () => ({
-    landing: false
+    landing: false,
+    dialog: true,
+    sim: false
   }),
   computed: {
-    ...mapState('app', ['login'])
+    ...mapState('app', ['login', 'money'])
   },
   watch: {
     '$route' (to, from) {
@@ -27,6 +47,13 @@ export default {
       } else {
         this.landing = false
       }
+    }
+  },
+  methods: {
+    ...mapMutations('app', ['setMoney']),
+    closeDialog () {
+      this.dialog = false
+      this.setMoney(this.money + 2.00)
     }
   }
 }
