@@ -6,6 +6,7 @@
 export default [
   {
     path: '/dashboard',
+    name: 'Dash',
     // Relative to /src/views
     view: 'Dashboard'
   },
