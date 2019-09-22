@@ -34,7 +34,7 @@ export default {
   components: { login },
   data: () => ({
     landing: false,
-    dialog: true,
+    dialog: false,
     sim: false
   }),
   computed: {
