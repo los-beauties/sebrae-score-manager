@@ -24,7 +24,7 @@
       .card
         h2 Quase lá!
         h2 Vamos criar uma senha
-        v-text-field(solo='' height="80" v-on:keyup.enter="goToLogin")
+        v-text-field(solo='' type="password" height="80" v-on:keyup.enter="goToLogin")
 </template>
 <script>
 import {

@@ -23,6 +23,7 @@ export default {
   methods: {
     ...mapMutations('app', ['setLogin']),
     auth () {
+      this.setLogin(true)
       const data = {
         email: this.email,
         password: this.password

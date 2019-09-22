@@ -9,7 +9,7 @@
 export default {
   metaInfo () {
     return {
-      title: 'Sebrae Score'
+      title: 'Sebrae Recompensa'
     }
   }
 }

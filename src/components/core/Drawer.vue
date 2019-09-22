@@ -19,7 +19,7 @@
       >
         <v-list-tile avatar>
           <v-list-tile-title class="title pl-5">
-            Sebrae Score
+            Sebrae Recompensa
           </v-list-tile-title>
         </v-list-tile>
         <v-divider/>
@@ -60,13 +60,13 @@ export default {
     links: [
       {
         to: '/dashboard',
-        icon: 'mdi-view-dashboard',
+        icon: 'fas fa-question',
         text: 'Perguntas'
       },
       {
         to: '/catalog',
-        icon: 'mdi-view-dashboard',
-        text: 'Shop'
+        icon: 'fas fa-shopping-cart',
+        text: 'Comprar'
       },
       {
         to: '/products',
@@ -75,7 +75,7 @@ export default {
       },
       {
         to: '/perfil',
-        icon: 'mdi-view-dashboard',
+        icon: 'mdi-domain',
         text: 'Minha empresa'
       }
     ],
